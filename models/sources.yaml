@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: rugs_source
+    schema: postgres
+    schema: public
+    tables:
+      - name: rugs_usa_category_map
+      - name: rugs_usa_color_map
+      - name: rugs_usa_links
+      - name: rugs_usa_pads_upsell
+      - name: rugs_usa_parent
+      - name: rugs_usa_variant

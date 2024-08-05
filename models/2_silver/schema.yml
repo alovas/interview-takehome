@@ -1,0 +1,118 @@
+version: 2
+
+models:
+  - name: silver_category_sales
+    description: "Category sales overview."
+    columns:
+      - name: category_value
+        description: "The value of the category."
+      - name: pid
+        description: "Product ID."
+      - name: total_sales
+        description: "Total sales amount."
+      - name: avg_price
+        description: "Average price of products."
+      - name: month
+        description: "Month of the sales data."
+      - name: prev_month_sales
+        description: "Sales amount of the previous month."
+      - name: sales_diff
+        description: "Difference in sales compared to the previous month."
+      - name: sales_rank
+        description: "Rank of sales within the category."
+
+  - name: silver_monthly_sales
+    description: "Monthly sales trend."
+    columns:
+      - name: month
+        description: "Month of the sales data."
+      - name: total_sales
+        description: "Total sales amount."
+      - name: avg_price
+        description: "Average price of products."
+      - name: prev_month_sales
+        description: "Sales amount of the previous month."
+      - name: sales_diff
+        description: "Difference in sales compared to the previous month."
+
+  - name: silver_variant_performance
+    description: "Performance of product variants."
+    columns:
+      - name: variant
+        description: "Product variant."
+      - name: pid
+        description: "Product ID."
+      - name: total_sales
+        description: "Total sales amount."
+      - name: avg_price
+        description: "Average price of products."
+      - name: total_stock
+        description: "Total stock level."
+      - name: sales_rank
+        description: "Rank of sales within the variant."
+
+  - name: silver_cohort_analysis
+    description: "Customer cohort analysis."
+    columns:
+      - name: pid
+        description: "Product ID."
+      - name: cohort_month
+        description: "Month of the cohort."
+      - name: variant_count
+        description: "Count of product variants."
+      - name: total_sales
+        description: "Total sales amount."
+      - name: cohort_rank
+        description: "Rank of sales within the cohort."
+
+  - name: silver_inventory_levels
+    description: "Inventory levels and status."
+    columns:
+      - name: pid
+        description: "Product ID."
+      - name: name
+        description: "Product name."
+      - name: stock_level
+        description: "Current stock level."
+      - name: depletion_level
+        description: "Depletion level of the stock."
+      - name: estimated_delivery_date
+        description: "Estimated delivery date."
+
+  - name: silver_top_categories
+    description: "Top categories by sales."
+    columns:
+      - name: category_value
+        description: "The value of the category."
+      - name: total_sales
+        description: "Total sales amount."
+
+  - name: silver_top_colors
+    description: "Top colors by sales."
+    columns:
+      - name: color_value
+        description: "The value of the color."
+      - name: total_sales
+        description: "Total sales amount."
+
+  - name: silver_promo_effectiveness
+    description: "Effectiveness of promotions vs regular sales."
+    columns:
+      - name: category_value
+        description: "The value of the category."
+      - name: promo_sales
+        description: "Total sales amount during promotions."
+      - name: regular_sales
+        description: "Total regular sales amount."
+
+  - name: silver_sales_by_origin
+    description: "Sales performance by product origin."
+    columns:
+      - name: origin
+        description: "Product origin."
+      - name: total_sales
+        description: "Total sales amount."
+      - name: avg_price
+        description: "Average price of products."
+      - name: total_stock
+        description: "Total stock level."

@@ -1,0 +1,104 @@
+version: 2
+
+models:
+  - name: bronze_rugs_usa_category_map
+    description: "Raw data from rugs_usa_category_map table"
+    columns:
+      - name: pid
+        tests:
+          - not_null
+          - unique
+      - name: category_id
+      - name: category_value
+      - name: dw_insert_timestamp
+  - name: bronze_rugs_usa_color_map
+    description: "Raw data from rugs_usa_color_map table"
+    columns:
+      - name: pid
+        tests:
+          - not_null
+          - unique
+      - name: color_id
+      - name: color_value
+      - name: dw_insert_timestamp
+  - name: bronze_rugs_usa_links
+    description: "Raw data from rugs_usa_links table"
+    columns:
+      - name: base_url
+      - name: page_links
+      - name: card_links
+      - name: request_time_stamp
+      - name: dw_insert_timestamp
+  - name: bronze_rugs_usa_pads_upsell
+    description: "Raw data from rugs_usa_pads_upsell table"
+    columns:
+      - name: size
+      - name: shape
+      - name: price
+      - name: width
+      - name: sqft
+      - name: type
+      - name: stock
+      - name: height
+      - name: variant
+      - name: p_id
+      - name: pad_id
+      - name: dw_insert_timestamp
+  - name: bronze_rugs_usa_parent
+    description: "Raw data from rugs_usa_parent table"
+    columns:
+      - name: pid
+        tests:
+          - not_null
+          - unique
+      - name: product_type_id
+      - name: name
+      - name: url
+      - name: origin
+      - name: thickness
+      - name: material
+      - name: weave
+      - name: weave_feature
+      - name: color
+      - name: brand
+      - name: imageName
+      - name: imageType
+      - name: internalName
+      - name: category
+      - name: min_price
+      - name: max_price
+      - name: availability
+      - name: aggregate
+      - name: clearance
+      - name: long_description
+      - name: shopbyroom
+      - name: dw_insert_timestamp
+  - name: bronze_rugs_usa_variant
+    description: "Raw data from rugs_usa_variant table"
+    columns:
+      - name: pid
+        tests:
+          - not_null
+      - name: variant
+      - name: actual_size
+      - name: weave_feature
+      - name: weave_cat
+      - name: size_grp
+      - name: shipping_size
+      - name: shape
+      - name: weight
+      - name: price
+      - name: msrp
+      - name: stock_level
+      - name: depletion_level
+      - name: low_stock
+      - name: estimated_delivery_date
+      - name: this_isd_range
+      - name: status
+      - name: origin
+      - name: new_arrival
+      - name: stockMsg
+      - name: stockEddMsg
+      - name: other_stock_core
+      - name: other_stock_compass
+      - name: dw_insert_timestamp

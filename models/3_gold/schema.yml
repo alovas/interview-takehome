@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: gold_monthly_sales_performance
+    description: "Monthly sales performance with lag for trend analysis."
+    columns:
+      - name: month
+        description: "Month of the sales data."
+      - name: monthly_sales
+        description: "Total sales amount for the month."
+      - name: avg_sales_price
+        description: "Average sales price for the month."
+      - name: prev_month_sales
+        description: "Sales amount of the previous month."
+      - name: sales_diff
+        description: "Difference in sales compared to the previous month."
+
+  - name: gold_category_sales_trends
+    description: "Category sales trends with rank for trend analysis."
+    columns:
+      - name: category_value
+        description: "The value of the category."
+      - name: month
+        description: "Month of the sales data."
+      - name: monthly_sales
+        description: "Total sales amount for the month."
+      - name: sales_rank
+        description: "Rank of sales within the category by month."
+
+  - name: gold_cohort_sales_performance
+    description: "Cohort sales performance with rank."
+    columns:
+      - name: cohort_month
+        description: "Month of the cohort."
+      - name: total_sales
+        description: "Total sales amount for the cohort."
+      - name: total_variants
+        description: "Total count of product variants for the cohort."
+      - name: cohort_rank
+        description: "Rank of sales within the cohort by month."
+
+  - name: gold_promo_vs_regular_sales
+    description: "Comparison of promotional vs regular sales with dense rank."
+    columns:
+      - name: category_value
+        description: "The value of the category."
+      - name: promo_sales
+        description: "Total sales amount during promotions."
+      - name: regular_sales
+        description: "Total regular sales amount."
+      - name: promo_sales_rank
+        description: "Rank of promotional sales by category."
+      - name: regular_sales_rank
+        description: "Rank of regular sales by category."

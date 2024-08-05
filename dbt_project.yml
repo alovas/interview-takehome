@@ -20,7 +20,13 @@ clean-targets:
 require-dbt-version: [">=1.0.0", "<2.0.0"]
 
 models:
-  # jaffle_shop:
-  #     materialized: table
-  #     staging:
-  #       materialized: view
+  jaffle_shop:
+    bronze:
+      +materialized: table
+      +tags: ['daily', 'bronze']
+    silver:
+      +materialized: table
+      +tags: ['daily', 'silver']
+    gold:
+      +materialized: view
+      +tags: ['monthly', 'gold']
